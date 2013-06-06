@@ -1,0 +1,24 @@
+Default: &defaults
+  user: Resourceful
+  password: Resourceful
+  host: localhost
+  database: Resourceful
+  connections: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: Resourceful_test
+  <<: *defaults
+
+Staging:
+  database: Resourceful_staging
+  connections: 100
+  <<: *defaults
+
+Production:
+  database: Resourceful_production
+  connections: 100
+  host: localhost
+  <<: *defaults
